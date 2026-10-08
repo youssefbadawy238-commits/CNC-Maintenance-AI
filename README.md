@@ -97,7 +97,31 @@ and select a GPU accelerator.
 
 ### Step 4 — Add the Haas CNC Manual
 
-Upload the **Haas CNC Operator's Manual PDF** to the Kaggle environment.
+The project requires the **Haas CNC Operator's Manual PDF** as the knowledge source for the RAG system.
+
+Upload or add the Haas CNC Operator's Manual PDF to the Kaggle environment using **Add Data**.
+
+The original development path was:
+
+`/kaggle/input/datasets/youssefbadawy112/haas-pdf/haas_manual.pdf.pdf`
+
+This path is specific to the original Kaggle environment and should not be used by other users.
+
+The current `rag.py` automatically searches inside:
+
+`/kaggle/input/`
+
+for PDF files.
+
+Therefore, users do not need to use the original author's Kaggle path.
+
+If automatic detection is not used, update the `pdf_path` variable in the **Load Haas Manual** cell to match the actual location of the uploaded PDF.
+
+Example:
+
+```python
+pdf_path = "/kaggle/input/your-dataset-name/haas_manual.pdf"
+```
 
 ### Step 5 — Run the Notebook
 
